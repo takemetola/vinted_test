@@ -6,7 +6,7 @@ import org.testng.annotations.Listeners;
 import pom.pages.Common;
 import pom.utils.TestListener;
 
-@Listeners(TestListener.class)
+//@Listeners(TestListener.class)
 public abstract class TestBase {
 
     @BeforeMethod
