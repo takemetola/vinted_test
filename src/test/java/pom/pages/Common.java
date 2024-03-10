@@ -2,6 +2,7 @@ package pom.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.utils.Driver;
@@ -37,4 +38,23 @@ public class Common {
     public static void clickOnElement(By locator) {
         getElement(locator).click();
     }
+
+    public static void clickArea(int x, int y) {
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveByOffset(x, y).clickAndHold().build().perform();
+    }
+
+    public static void scrollWindowByActionsPlus3500Y() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .moveByOffset(168, 0)
+                .release()
+                .perform();
+
+    }
+    public static void switchToFrame(By locator) {
+        Driver.getDriver().switchTo().frame(getElement(locator));
+    }
+
 }
