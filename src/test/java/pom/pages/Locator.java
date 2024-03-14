@@ -14,6 +14,8 @@ public class Locator {
 
             public static By passwordBox = By.xpath("//input[@type='password']");
             public static By buttonSubmit = By.xpath("//button[@type='submit']");
+            public static By slider = By.xpath("//i[@class='sliderIcon']");
+            public static By iFrameSwitch = By.xpath("//iframe[@src]");
         }
     }
 }
