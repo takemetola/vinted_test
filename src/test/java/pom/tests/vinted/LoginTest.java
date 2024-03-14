@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pom.pages.vinted.LoginPage;
 import pom.tests.TestBase;
 
-public class LoginTest extends TestBase {
+public class LoginTest extends TestBase  {
     @BeforeMethod
     @Override
     public void setUp() {
@@ -14,7 +14,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void testLogin() {
+    public void testLogin () throws InterruptedException {
         String email = "desire2work4hostinger@gmail.com";
         String password = "Testas123";
 
@@ -25,6 +25,7 @@ public class LoginTest extends TestBase {
         LoginPage.inputEmail(email);
         LoginPage.inputPassword(password);
         LoginPage.clickButtonSubmit();
+        LoginPage.clickHoldReleaseSlider();
         String actualResult = "";
         String expectedResult = "";
         Assert.assertEquals(actualResult, expectedResult);
